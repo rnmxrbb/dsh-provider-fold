@@ -1,5 +1,7 @@
 # dsh-provider-fold
 
+[![Listed on dsh-plugin.org](https://dsh-plugin.org/badges/listed.svg)](https://dsh-plugin.org/plugins/rnmxrbb/dsh-provider-fold)
+
 Collapsible provider groups with prominent headings for the **DSH (DeepSeek Harness)** model selection menu.
 
 When several providers are connected, the model picker becomes one long scroll. This plugin turns every provider heading into a clickable disclosure row with a stronger visual style, and lets you fold the providers you are not using.
