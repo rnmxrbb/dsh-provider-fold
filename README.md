@@ -21,14 +21,22 @@ When several providers are connected, the model picker becomes one long scroll. 
 
 ## Install
 
+Install straight from this repository:
+
 ```bash
-dsh plugin --profile web add dsh-provider-fold
+dsh plugin --profile web add github:rnmxrbb/dsh-provider-fold
 ```
 
 Replace `web` with the profile you use (for the desktop app that is usually `desktop`):
 
 ```bash
-dsh plugin --profile desktop add dsh-provider-fold
+dsh plugin --profile desktop add github:rnmxrbb/dsh-provider-fold
+```
+
+The same target also works as a full URL if your setup prefers it:
+
+```bash
+dsh plugin --profile desktop add https://github.com/rnmxrbb/dsh-provider-fold
 ```
 
 After installing, reload the page once. The plugin is a client-side bundle with `immediately: true`, so it mounts with the app shell.

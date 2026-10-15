@@ -1,5 +1,7 @@
 # dsh-provider-fold
 
+[![Listed on dsh-plugin.org](https://dsh-plugin.org/badges/listed.svg)](https://dsh-plugin.org/plugins/rnmxrbb/dsh-provider-fold)
+
 为 **DSH（DeepSeek Harness）** 模型选择菜单提供「厂商分组可折叠 + 厂商标题更醒目」。
 
 接入多个厂商后，模型选择列表会变成一条很长的滚动列表。这个插件把每个厂商标题变成可点击的折叠行，并把标题样式做明显，让你可以把手头不用的厂商收起来。
@@ -19,14 +21,22 @@
 
 ## 安装
 
+直接从本仓库安装：
+
 ```bash
-dsh plugin --profile web add dsh-provider-fold
+dsh plugin --profile web add github:rnmxrbb/dsh-provider-fold
 ```
 
 把 `web` 换成你使用的 profile（桌面端通常是 `desktop`）：
 
 ```bash
-dsh plugin --profile desktop add dsh-provider-fold
+dsh plugin --profile desktop add github:rnmxrbb/dsh-provider-fold
+```
+
+也可以写完整 URL：
+
+```bash
+dsh plugin --profile desktop add https://github.com/rnmxrbb/dsh-provider-fold
 ```
 
 安装后刷新一次页面即可。本插件是 `immediately: true` 的客户端 bundle，会随应用外壳一起挂载。
