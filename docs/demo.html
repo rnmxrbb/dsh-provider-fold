@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN" data-platform="win32" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<title>dsh-provider-fold — before / after</title>
+<link rel="stylesheet" href="./menu.css" />
+<style>
+  body { background: #1b1b1c; padding: 26px 30px 32px; }
+  h1 { font-size: 16px; font-weight: 600; margin: 0 0 4px; }
+  .sub { color: var(--dsw-alias-label-tertiary); font-size: 12px; margin: 0 0 20px; }
+  .cols { display: flex; gap: 28px; align-items: flex-start; }
+  .col { display: flex; flex-direction: column; gap: 9px; }
+  .col h2 {
+    font-size: 11px; font-weight: 600; margin: 0; letter-spacing: .04em;
+    text-transform: uppercase; color: var(--dsw-alias-label-tertiary);
+  }
+  .stage {
+    background: #232325;
+    border: 0.5px solid var(--dsw-alias-border-l2);
+    border-radius: var(--dsw-radius-lg);
+    padding: 12px;
+  }
+  .caption { color: var(--dsw-alias-label-caption); font-size: 11px; max-width: 300px; line-height: 1.5; }
+  iframe { border: 0; width: 316px; height: 420px; display: block; }
+</style>
+</head>
+<body>
+  <h1>dsh-provider-fold</h1>
+  <p class="sub">DSH 模型选择菜单 — 厂商分组折叠 + 醒目厂商标题（深色主题，按真实 token 还原）</p>
+
+  <div class="cols">
+    <div class="col">
+      <h2>Before</h2>
+      <div class="stage"><iframe src="./before.html" scrolling="no"></iframe></div>
+      <span class="caption">厂商标题 11px/500 三级弱化色，所有模型一次性铺开。</span>
+    </div>
+    <div class="col">
+      <h2>After — dsh-provider-fold</h2>
+      <div class="stage"><iframe src="./after.html" scrolling="no"></iframe></div>
+      <span class="caption">标题 12px/600 主色 + 折叠箭头；已折叠厂商显示模型数量。</span>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN" data-platform="win32" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<title>dsh-provider-fold — after</title>
+<link rel="stylesheet" href="./menu.css" />
+</head>
+<body class="demo-full">
+<!-- The same menu, with the real client.js bundle applied. DeepSeek and
+     WorkBuddy start folded, as if the user had saved that state earlier. -->
+<div class="menu" role="group" aria-label="模型">
+  <div class="searchRow"><div class="search"><input type="text" role="searchbox" placeholder="搜索模型…" readonly /></div></div>
+  <div id="menu-models" class="groups" role="menu" aria-label="模型">
+    <section role="group" aria-labelledby="h-deepseek-account" data-menu-group="">
+      <span aria-hidden="true" data-menu-group-start=""></span>
+      <div id="h-deepseek-account" data-menu-group-heading="" class="heading">DeepSeek 账号</div>
+      <button type="button" role="menuitemradio" aria-checked="true" class="option optionActive"><span class="optionCopy"><span class="modelName">DeepSeek-V41-Flash</span></span><span class="check"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+      <button type="button" role="menuitemradio" aria-checked="false" class="option"><span class="optionCopy"><span class="modelName">DeepSeek-V4-Pro</span></span><span class="check"></span></button>
+    </section>
+    <section role="group" aria-labelledby="h-deepseek-official" data-menu-group="">
+      <span aria-hidden="true" data-menu-group-start=""></span>
+      <div id="h-deepseek-official" data-menu-group-heading="" class="heading">DeepSeek</div>
+      <button type="button" role="menuitemradio" aria-checked="false" class="option"><span class="optionCopy"><span class="modelName">DeepSeek-V41-Flash</span></span><span class="check"></span></button>
+      <button type="button" role="menuitemradio" aria-checked="false" class="option"><span class="optionCopy"><span class="modelName">DeepSeek-V4-Pro</span></span><span class="check"></span></button>
+    </section>
+    <section role="group" aria-labelledby="h-workbuddy-ai" data-menu-group="">
+      <span aria-hidden="true" data-menu-group-start=""></span>
+      <div id="h-workbuddy-ai" data-menu-group-heading="" class="heading">WorkBuddy</div>
+      <button type="button" role="menuitemradio" aria-checked="false" class="option"><span class="optionCopy"><span class="modelName">Hy4 preview · x0.29 · 夜间免费</span></span><span class="check"></span></button>
+      <button type="button" role="menuitemradio" aria-checked="false" class="option"><span class="optionCopy"><span class="modelName">Hy3 · x0.00 · 限时免费</span></span><span class="check"></span></button>
+      <button type="button" role="menuitemradio" aria-checked="false" class="option"><span class="optionCopy"><span class="modelName">Hy3 · x0.05</span></span><span class="check"></span></button>
+      <button type="button" role="menuitemradio" aria-checked="false" class="option"><span class="optionCopy"><span class="modelName">Step-5-Preview · x0.00 · 独家限免</span></span><span class="check"></span></button>
+    </section>
+  </div>
+</div>
+<script>window.__ModuleLoader__ = { load(entry) { window.__entry = entry; } };</script>
+<script src="../client.js"></script>
+<script>
+(async () => {
+  // Seed a saved folding state before the factory reads localStorage.
+  localStorage.setItem("dsh-provider-fold:collapsed", JSON.stringify(["DeepSeek", "WorkBuddy"]));
+  const mod = window.__entry.factory(() => { throw new Error("no requires"); });
+  mod.apply({ effect(fn) { return fn(); } });
+  await new Promise((r) => setTimeout(r, 60));
+  document.title = "ready";
+})();
+</script>
+</body>
+</html>
